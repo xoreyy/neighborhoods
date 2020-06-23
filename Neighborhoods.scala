@@ -27,7 +27,7 @@ object Neighborhoods extends App {
       }
     }
     
-    // need to find subset of allcells whose members C satisfy V[c in C] E[p in poscells] st. MD(m, p) <= n
+    // need to find subset of allcells whose members C satisfy V[c in C] E[p in poscells] st. MD(c, p) <= n
     // in this case we just want this set's cardinality, which is the count of (unique) neighborhood cells
     var neighborcount = 0
     allcells.foreach(c => if (poscells.exists(withinMD(_, c, n))) neighborcount+=1)
